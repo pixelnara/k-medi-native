@@ -46,6 +46,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -118,7 +119,7 @@ ul {
   font-size: clamp(38px, 5.4vw, 76px);
 }
 .h-lg {
-  font-size: clamp(56px, 6vw, 80px);
+  font-size: clamp(56px, 5vw, 80px);
   font-weight: 700;
 }
 .h-md {
@@ -965,7 +966,7 @@ ul {
   text-align: center;
   font-family: var(--serif);
   color: var(--body1);
-  font-size: clamp(20px, 2.1vw, 28px);
+  font-size: clamp(20px, 1.7vw, 28px);
   font-weight: 500;
   line-height: 1.55;
   max-width: 900px;
@@ -1189,9 +1190,9 @@ ul {
   font-weight: 700;
   line-height: 1.8;
   color: rgba(255, 255, 255, 0.85);
-  max-width: 100%;
+  max-width: 54ch;
   margin-bottom: 40px;
-  white-space: nowrap;
+  text-align: center;
 }
 
 /* ============================================================
@@ -1602,7 +1603,7 @@ ul {
 }
 @media (max-width: 860px) {
   :root {
-    --header-h: 72px;
+    --header-h: 64px;
   }
   .stay__grid {
     grid-template-columns: 1fr;
@@ -1624,6 +1625,55 @@ ul {
   }
   .header__util {
     display: none;
+  }
+
+  /* Hero */
+  .hero__title {
+    margin-top: 70px;
+    font-size: clamp(38px, 8vw, 60px);
+  }
+  .hero__desc {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  .hero__scroll {
+    display: none;
+  }
+
+  /* Section titles */
+  .h-lg {
+    font-size: clamp(36px, 7vw, 60px);
+  }
+
+  /* Feature caption */
+  .feature__caption {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Services intro */
+  .services__intro {
+    font-size: clamp(16px, 4vw, 20px);
+  }
+
+  /* CTA */
+  .cta-dark__desc {
+    font-size: 17px;
+  }
+
+  /* Trust logos */
+  .trust__logos {
+    gap: clamp(24px, 5vw, 60px);
+  }
+
+  /* Compare grid — already has 760px rule, keep here for safety */
+  .compare {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  .footer__mid {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 600px) {
@@ -1652,5 +1702,60 @@ ul {
   .bk-field:first-child {
     border-top: none;
     padding-top: 0;
+  }
+
+  /* Header */
+  .brand {
+    font-size: 22px;
+  }
+  .brand small {
+    letter-spacing: 0.25em;
+  }
+  .header__right .btn {
+    padding: 0 14px;
+    font-size: 12px;
+    height: 40px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Accordion */
+  .acc-head {
+    font-size: 18px;
+    padding: 20px 20px;
+  }
+  .acc-body__inner {
+    padding: 0 20px 22px;
+  }
+
+  /* Trust logos */
+  .trust__intro {
+    font-size: 15px;
+  }
+
+  /* CTA */
+  .cta-dark__title {
+    font-size: clamp(28px, 7vw, 40px);
+  }
+  .cta-dark__desc {
+    font-size: 15px;
+  }
+
+  /* Follow grid */
+  .follow-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  /* Feature */
+  .feature__title {
+    font-size: clamp(28px, 6vw, 40px);
+  }
+  .feature__desc {
+    font-size: 15px;
+  }
+
+  /* whyus intro */
+  .whyus__intro {
+    font-size: clamp(17px, 4vw, 22px);
   }
 }
