@@ -1437,7 +1437,7 @@ ul {
   transition: border-color 0.3s;
 }
 .acc-item.is-open {
-  border-color: var(--caption);
+  border: 3px solid var(--caption);
 }
 .acc-head {
   width: 100%;
