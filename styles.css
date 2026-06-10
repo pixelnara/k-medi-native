@@ -1556,8 +1556,9 @@ ul {
   font-weight: 600;
 }
 .hiw-card__desc {
-  color: var(--body2);
+  color: var(--body1);
   font-size: 15.5px;
+  font-weight: 530;
   line-height: 1.85;
   max-width: 45ch;
   word-break: keep-all;
