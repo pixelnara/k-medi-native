@@ -913,7 +913,7 @@ ul {
 }
 .feature__title {
   font-family: var(--serif);
-  color: var(--heading2);
+  color: var(--caption);
   font-size: clamp(40px, 4vw, 72px);
   font-weight: 600;
   line-height: 1.05;
