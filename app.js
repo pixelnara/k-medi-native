@@ -211,11 +211,9 @@
         } catch (err) {}
         const dx = e.clientX - startX;
         const { step } = metrics();
-        // move at least one slide past a 12% threshold, more for longer drags
         let shift = 0;
-        if (Math.abs(dx) > step * 0.12) {
-          shift = -Math.round(dx / step);
-          if (shift === 0) shift = dx < 0 ? 1 : -1;
+        if (Math.abs(dx) > step * 0.08) {
+          shift = dx < 0 ? 1 : -1;
         }
         goFeature(fIndex + shift);
       }
