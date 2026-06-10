@@ -17,6 +17,7 @@
   --heading: #111111;
   --heading2: #222222;
   --heading3: #333333;
+  --heading4: #444444;
   --body1: #222222;
   --body2: #6a6a6a;
   --caption: #7c4d56;
@@ -1450,7 +1451,7 @@ ul {
   text-align: left;
   font-family: var(--sans);
   font-size: 22px;
-  font-weight: 720;
+  font-weight: 640;
   color: var(--heading3);
   letter-spacing: -0.01em;
   transition: color 0.3s;
