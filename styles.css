@@ -1610,6 +1610,12 @@ ul {
   .hiw-card__step {
     font-size: var(--text-21);
   }
+  #how.section {
+    padding-top: 85px;
+  }
+  #how .hiw__head {
+    margin-bottom: var(--space-8);
+  }
 }
 
 /* ============================================================
