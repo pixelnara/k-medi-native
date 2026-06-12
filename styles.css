@@ -1420,7 +1420,7 @@ ul {
 .gnb-col > h4 {
   font-family: var(--font-sans);
   color: var(--text-heading);
-  font-size: 22px;
+  font-size: 23px;
   font-weight: 600;
   padding-bottom: var(--space-4);
   margin-bottom: 18px;
@@ -1437,8 +1437,8 @@ ul {
   letter-spacing: var(--tracking-tight);
   transition: 0.3s;
   text-decoration: none;
-  font-weight: 450;
-  line-height: 1.8;
+  font-weight: 400;
+  line-height: 1.9;
 }
 .gnb-col a.gnb-link--bold {
   font-weight: 550;
