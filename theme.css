@@ -8,21 +8,18 @@
 
   /* Gray — Cool Gray + Deep Dark (스케일 규칙: 번호↑ = 명도↓) */
   --white: #ffffff;
-  --gray-20: #f9fafa; /* 미사용(예약) */
-  --gray-50: #f6f7f8;
-  --gray-100: #eeeff1; /* styles.css 직접 사용 */
-  --gray-200: #e3e5e8;
-  --gray-400: #838995;
-  --gray-500: #6c727f;
-  --gray-600: #505662; /* 미사용(예약) */
-  --gray-700: #3e434d; /* 2026-06-12 수정: 구 #22252b(800보다 어두운 역전) → 스케일 정렬 */
-  --gray-800: #2d3139;
-  --gray-900: #1a1d23;
-  --gray-950: #16181d;
-  --black: #000000; /* 예약: 순수 블랙. 오버레이는 rgba(0,0,0,…) 직접 사용 */
-
-  /* Beige — 따뜻한 베이지 톤 */
-  --beige-100: #ece5df;
+  --gray-20: #fafafa;
+  --gray-50: #f8f8f8;
+  --gray-100: #f0f0f0;
+  --gray-200: #e4e4e4;
+  --gray-400: #a0a0a0;
+  --gray-500: #757575;
+  --gray-600: #585858;
+  --gray-700: #424242;
+  --gray-800: #303030;
+  --gray-900: #1d1d1d;
+  --gray-950: #161616;
+  --black: #000000;
 
   /* Blue */
   --blue-500: #0c42e3;
@@ -96,7 +93,7 @@
 
   /* ─── Primitive: Shadow ─── */
 
-  --shadow-header: 0 1px 0 var(--beige-100);
+  --shadow-header: 0 1px 0 var(--gray-200);
   --shadow-card: 0 30px 70px -30px rgba(40, 30, 25, 0.35);
   --shadow-btn: 0 4px 16px rgba(0, 0, 0, 0.12);
 
