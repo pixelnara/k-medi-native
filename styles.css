@@ -644,6 +644,7 @@ ul {
 .stay-card__label {
   font-family: var(--font-sans);
   font-size: var(--text-sm);
+  font-weight: 750;
   letter-spacing: 0.26em;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -665,9 +666,10 @@ ul {
   font-size: var(--text-sm);
   letter-spacing: var(--tracking-normal);
   padding: 5px 15px;
+  background: var(--white);
+  color: var(--gray-900);
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius-1px);
-  backdrop-filter: blur(2px);
   transition:
     background 0.3s,
     color 0.3s;
@@ -1023,8 +1025,10 @@ ul {
   color: var(--text-body);
 }
 .compare__list b {
+  display: block;
   color: var(--text-heading);
   font-weight: 750;
+  margin-bottom: var(--space-1);
 }
 @media (max-width: 760px) {
   .compare {
@@ -1525,7 +1529,7 @@ ul {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 5px;
 }
 .acc-item {
   background: var(--gray-150);
@@ -1609,11 +1613,11 @@ ul {
 .hiw__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 10px;
 }
 .hiw-card {
-  background: var(--gray-50);
-  border: 1px solid var(--gray-200);
+  background: var(--white);
+  border: 2px solid var(--gray-900);
   padding: var(--space-12) clamp(28px, 3vw, 44px) var(--space-12);
   text-align: center;
   display: flex;
@@ -1653,6 +1657,7 @@ ul {
   .hiw__grid {
     grid-template-columns: 1fr;
     width: 100%;
+    gap: 5px;
   }
   .hiw-card__step {
     font-size: var(--text-21);
@@ -1917,14 +1922,14 @@ ul {
   .compare__list b {
     display: block;
     margin-bottom: var(--space-1);
-    font-size: var(--text-md);
+    font-size: var(--text-lg);
     font-weight: 600;
     color: var(--text-heading);
     letter-spacing: var(--tracking-tight);
   }
   .compare__list li span {
     display: block;
-    font-size: var(--text-sm);
+    font-size: var(--text-14);
     color: var(--text-body);
     letter-spacing: var(--tracking-snug);
   }
