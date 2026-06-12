@@ -184,6 +184,7 @@
       horiz = false;
     let startX = 0,
       startY = 0,
+      lastX = 0,
       base = 0,
       moved = false;
     fvp.addEventListener("pointerdown", (e) => {
@@ -192,7 +193,7 @@
       decided = false;
       horiz = false;
       moved = false;
-      startX = e.clientX;
+      startX = lastX = e.clientX;
       startY = e.clientY;
       base = baseFor(cloneOffset + fIndex);
     });
@@ -211,6 +212,7 @@
       }
       if (!horiz) return; // vertical gesture → let page scroll
       moved = true;
+      lastX = e.clientX; // track real position; pointercancel may report stale clientX
       e.preventDefault();
       setTranslate(base + dx, false);
     });
@@ -222,7 +224,9 @@
         try {
           fvp.releasePointerCapture(e.pointerId);
         } catch (err) {}
-        const dx = e.clientX - startX;
+        // Use lastX instead of e.clientX: pointercancel on some browsers
+        // reports clientX = startX (or 0), which would cause a false snap-back.
+        const dx = lastX - startX;
         const { step } = metrics();
         let shift = 0;
         if (Math.abs(dx) > step * 0.08) {
