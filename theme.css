@@ -24,8 +24,8 @@
   /* Beige — 따뜻한 베이지 톤 */
   --beige-100: #ece5df;
 
-  /* Gold */
-  --gold-500: #b08e31;
+  /* Blue */
+  --blue-500: #0369d1;
 
   /* Teal — 라이트 서피스 */
   --teal-100: #dee3e3;
@@ -112,7 +112,7 @@
   --text-body: var(--gray-500);
   --text-body2: var(--gray-600);
   --text-subtle: var(--gray-400);
-  --text-caption: var(--gold-500);
+  --text-caption: var(--blue-500);
   --number: var(--gray-900);
 
   /* ─── Semantic: Border ─── */
