@@ -295,7 +295,7 @@ ul {
 .header__right {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 12px;
 }
 .header .link-arrow {
   color: var(--white);
@@ -438,7 +438,7 @@ ul {
 
 .hero__counter {
   position: absolute;
-  right: 32px;
+  left: 32px;
   bottom: 36px;
   z-index: 3;
   display: flex;
@@ -1820,7 +1820,7 @@ ul {
     display: none;
   }
   .hero__counter {
-    right: 20px;
+    left: 20px;
     bottom: var(--space-9);
   }
   .hero__scroll {
