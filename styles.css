@@ -1011,7 +1011,7 @@ ul {
 .compare__list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-6);
 }
 .compare__list li {
   font-size: var(--text-18);
@@ -1020,7 +1020,7 @@ ul {
 }
 .compare__list b {
   color: var(--text-heading);
-  font-weight: 600;
+  font-weight: 750;
 }
 @media (max-width: 760px) {
   .compare {
@@ -1905,6 +1905,7 @@ ul {
     display: block;
     font-size: var(--text-sm);
     color: var(--text-body);
+    letter-spacing: var(--tracking-snug);
   }
 
   /* Footer */
