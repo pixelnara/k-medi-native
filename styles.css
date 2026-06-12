@@ -525,6 +525,9 @@ ul {
   opacity: 0.5;
 }
 
+.hero__down {
+  display: none;
+}
 .hero__scroll {
   display: none;
   position: absolute;
@@ -2231,6 +2234,26 @@ ul {
   }
   .hero__counter-sep {
     opacity: 0.6;
+  }
+  .hero__down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    color: var(--white);
+    margin-top: var(--space-5);
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .hero__down svg {
+    width: 20px;
+    height: 20px;
+  }
+  .hero__down:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.9);
   }
   .hero__scroll {
     display: none;
