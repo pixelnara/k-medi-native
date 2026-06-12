@@ -1845,7 +1845,7 @@ ul {
     grid-template-columns: 1fr;
   }
   .compare__title {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
     text-align: center;
   }
   .compare__col {
