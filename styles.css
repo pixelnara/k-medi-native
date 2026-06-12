@@ -1696,11 +1696,11 @@ ul {
 
   /* Hero */
   .hero__inner {
-    padding-bottom: var(--space-20);
+    padding-bottom: calc(88px + var(--space-16));
   }
   .hero__brand {
     display: block;
-    font-size: var(--text-xs);
+    font-size: var(--text-base);
     font-weight: 750;
     letter-spacing: var(--tracking-wide);
     text-transform: uppercase;
@@ -1793,6 +1793,14 @@ ul {
   /* Footer */
   .footer__mid {
     grid-template-columns: 1fr;
+  }
+  .footer {
+    padding-bottom: calc(88px + var(--space-10));
+  }
+
+  /* Top button — position above CTA bar */
+  .top-btn {
+    bottom: calc(88px + var(--space-5));
   }
 
   /* Accordion */
