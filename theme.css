@@ -6,22 +6,22 @@
 :root {
   /* ─── Primitive: Color ─── */
 
-  /* Gray — Cool Gray + Deep Dark (스케일 규칙: 번호↑ = 명도↓) */
-  --white: #ffffff;
-  --gray-50: #f8f8fb;
-  --gray-150: #eaeaf1;
-  --gray-200: #e4e4ec;
-  --gray-400: #9e9eac;
-  --gray-500: #727282;
-  --gray-600: #565666;
-  --gray-800: #2e2e3b;
-  --gray-900: #1c1c26;
-  --gray-950: #141414;
+  /* ── Gray Scale (번호↑ = 명도↓) ── */
+  --white: #ffffff; /* 흰색 */
+  --gray-50: #f8f8fb; /* 배경 서피스 */
+  --gray-150: #eaeaf1; /* 구분선·배경 */
+  --gray-200: #e4e4ec; /* 보더 기본 */
+  --gray-400: #9e9eac; /* 서브텍스트 약 */
+  --gray-500: #727282; /* 본문 텍스트 */
+  --gray-600: #565666; /* 본문 텍스트2 */
+  --gray-800: #2e2e3b; /* 강조 보더 */
+  --gray-900: #1c1c26; /* 헤딩 텍스트 */
+  --gray-950: #141414; /* 최강 다크·버튼 */
 
-  /* Blue */
-  --blue-500: #0c42e3;
-  --blue-700: #103f8a;
-  --blue-800: #0d2b5a;
+  /* ── Blue Scale ── */
+  --blue-500: #0c42e3; /* 캡션·강조 */
+  --blue-700: #103f8a; /* 버튼 호버 */
+  --blue-800: #0d2b5a; /* 버튼 호버2 */
 
   /* Teal — 라이트 서피스 */
   --teal-100: #dee3e3;
