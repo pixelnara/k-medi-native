@@ -1436,6 +1436,8 @@ ul {
   font-size: var(--text-base);
   transition: 0.3s;
   text-decoration: none;
+  font-weight: 600;
+  line-height: 1.7;
 }
 .gnb-col a:hover {
   color: var(--text-caption);
