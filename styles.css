@@ -1466,6 +1466,9 @@ ul {
   color: var(--text-heading);
   line-height: 1;
 }
+.gnb-banner {
+  display: none;
+}
 .gnb-cols {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1851,6 +1854,44 @@ ul {
   }
   .gnb-sub-head {
     display: none;
+  }
+  .gnb-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-8);
+    padding: var(--space-6) var(--space-6);
+    background: var(--gray-950);
+    color: var(--white);
+    text-decoration: none;
+  }
+  .gnb-banner__inner {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+  .gnb-banner__label {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    letter-spacing: var(--tracking-wider);
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+  .gnb-banner__title {
+    font-size: var(--text-xl);
+    font-weight: 600;
+    letter-spacing: var(--tracking-tight);
+  }
+  .gnb-banner__sub {
+    font-size: var(--text-12);
+    opacity: 0.65;
+    margin-top: var(--space-1);
+  }
+  .gnb-banner__arrow {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    opacity: 0.8;
   }
   .stay__grid {
     grid-template-columns: 1fr;
