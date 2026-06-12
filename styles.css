@@ -2164,7 +2164,7 @@ ul {
   }
   .header__tagline {
     display: block;
-    font-size: var(--text-base);
+    font-size: var(--text-18);
     font-weight: 600;
     letter-spacing: var(--tracking-tight);
     text-transform: uppercase;
