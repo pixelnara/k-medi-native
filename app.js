@@ -56,6 +56,19 @@
     play();
   }
 
+  /* touch swipe on hero */
+  const heroEl = document.querySelector(".hero");
+  if (heroEl) {
+    let tx = 0;
+    heroEl.addEventListener("touchstart", (e) => { tx = e.touches[0].clientX; }, { passive: true });
+    heroEl.addEventListener("touchend", (e) => {
+      const dx = e.changedTouches[0].clientX - tx;
+      if (Math.abs(dx) < 40) return;
+      go(dx < 0 ? cur + 1 : cur - 1);
+      play();
+    }, { passive: true });
+  }
+
   /* ---------- Booking widget tabs ---------- */
   const bkTabs = [...document.querySelectorAll(".booking__tab")];
   const bkBodies = [...document.querySelectorAll(".booking__body")];
