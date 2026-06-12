@@ -1772,6 +1772,12 @@ ul {
   .compare__title {
     font-size: var(--text-lg);
   }
+  .compare__col--ours {
+    border: 2px solid var(--blue-700);
+  }
+  .compare__col:not(.compare__col--ours) {
+    border: 2px solid var(--gray-950);
+  }
 
   /* Footer */
   .footer__mid {
