@@ -1781,7 +1781,10 @@ ul {
     height: 40px;
     min-width: auto;
     padding: 0 var(--space-4);
-    border-radius: 5%;
+    border-radius: 0;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
     font-size: var(--text-sm);
     letter-spacing: var(--tracking-snug);
   }
