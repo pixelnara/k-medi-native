@@ -982,11 +982,11 @@ ul {
   width: 100%;
 }
 .compare__col {
-  background: var(--gray-150);
+  background: var(--gray-50);
   padding: clamp(30px, 3vw, 46px);
 }
 .compare__col--ours {
-  background: var(--gray-150);
+  background: var(--gray-50);
   border: 3px solid var(--border-2);
 }
 .compare__title {
