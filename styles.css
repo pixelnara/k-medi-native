@@ -1493,7 +1493,7 @@ ul {
   letter-spacing: var(--tracking-tight);
   transition: 0.3s;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 2.1;
 }
 .gnb-col a.gnb-link--bold {
@@ -1811,7 +1811,7 @@ ul {
   .gnb-col a {
     display: block;
     padding: var(--space-5) 0;
-    font-size: var(--text-2xl);
+    font-size: var(--text-18);
     font-weight: 500;
     color: var(--text-heading);
     letter-spacing: var(--tracking-tight);
@@ -1819,6 +1819,9 @@ ul {
     border-bottom: 1px solid var(--border);
   }
   .gnb-sub-head {
+    display: none;
+  }
+  .gnb-sub-list {
     display: none;
   }
   .gnb-sub-list {
