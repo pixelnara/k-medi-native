@@ -2057,7 +2057,7 @@ ul {
     --header-h: 70px;
   }
   .gnb-overlay .wrap {
-    padding-top: var(--space-10);
+    padding-top: calc(var(--space-10) + 1em);
   }
   /* depth1: 아코디언 헤더 */
   .gnb-col > h4 {
@@ -2065,7 +2065,7 @@ ul {
     align-items: center;
     justify-content: space-between;
     padding: var(--space-5) 0;
-    font-size: var(--text-21);
+    font-size: var(--text-19);
     font-weight: 600;
     color: var(--text-heading);
     letter-spacing: var(--tracking-tight);
@@ -2104,7 +2104,7 @@ ul {
   .gnb-col ul > li > a {
     display: block;
     padding: var(--space-4) 0;
-    font-size: var(--text-16);
+    font-size: var(--text-15);
     font-weight: 500;
     color: var(--text-heading);
     letter-spacing: var(--tracking-tight);
@@ -2173,7 +2173,7 @@ ul {
     display: block;
     padding: var(--space-3) 0;
     font-size: var(--text-13);
-    color: var(--text-body2);
+    color: var(--text-heading);
     letter-spacing: 0;
     border-bottom: 1px solid var(--border);
     line-height: 1.4;
@@ -2289,16 +2289,16 @@ ul {
   }
   .gnb-overlay__close {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 20%;
-    height: 80px;
+    top: 12px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 600;
     color: var(--gray-950);
-    background: var(--bg-white);
+    background: none;
     font-size: 0;
   }
   .gnb-overlay__close svg {
