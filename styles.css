@@ -2268,9 +2268,9 @@ ul {
     /* border-radius: 22px 22px 0 0; */
     box-shadow: 0 -4px 28px rgba(0, 0, 0, 0.13);
     align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2);
-    padding: 0 12px;
+    justify-content: center;
+    gap: 0;
+    padding: 0;
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
   .mbar-btn {
@@ -2279,7 +2279,7 @@ ul {
     align-items: center;
     justify-content: center;
     gap: 0;
-    width: 44px;
+    flex: 1;
     height: 44px;
     padding: 0;
     color: var(--gray-800);
@@ -2306,6 +2306,8 @@ ul {
     text-decoration: none;
     color: var(--gray-950);
     line-height: 1;
+    flex: 1.6;
+    padding: 0 8px;
   }
   .mbar-logo__name {
     font-size: 11px;
