@@ -2267,7 +2267,7 @@ ul {
     left: 0;
     right: 0;
     z-index: 500;
-    height: 76px;
+    height: 80px;
     background: var(--white);
     border-top: none;
     /* border-radius: 22px 22px 0 0; */
@@ -2283,7 +2283,7 @@ ul {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px;
+    gap: 5px;
     flex: 1;
     height: 100%;
     padding: 0;
@@ -2293,7 +2293,7 @@ ul {
     text-decoration: none;
   }
   .mbar-label {
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 600;
     letter-spacing: 0.02em;
     color: inherit;
@@ -2333,6 +2333,7 @@ ul {
     font-weight: 500;
     letter-spacing: 0.04em;
     color: var(--gray-500);
+    padding-top: 1px;
     white-space: nowrap;
   }
   /* Language bottom sheet */
