@@ -3144,16 +3144,20 @@ ul {
    시술 팝업 시트 (모바일 전용)
    ============================================================ */
 .proc-sheet {
-  display: none;
   position: fixed;
   inset: 0;
   z-index: 9100;
   background: #fff;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+  transform: translateY(100%);
+  visibility: hidden;
+  transition: transform 0.45s cubic-bezier(0.7, 0, 0.2, 1), visibility 0s linear 0.45s;
 }
 .proc-sheet.is-open {
-  display: block;
+  transform: translateY(0);
+  visibility: visible;
+  transition: transform 0.45s cubic-bezier(0.7, 0, 0.2, 1), visibility 0s linear 0s;
 }
 .proc-sheet__bar {
   display: flex;
