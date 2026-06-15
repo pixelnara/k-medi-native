@@ -164,6 +164,7 @@
   --text-body2: var(--gray-600);
   --text-body3: var(--gray-900);
   --text-subtle: var(--gray-400);
+  --text-subtle2: var(--gray-900);
   --text-caption: var(--violet-500);
   --number: var(--gray-900);
 

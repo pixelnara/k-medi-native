@@ -1543,7 +1543,7 @@ ul {
   font-weight: 700;
   font-size: var(--text-10);
   letter-spacing: 0.4em;
-  color: var(--text-subtle);
+  color: var(--text-subtle2);
   text-transform: uppercase;
 }
 .footer dl {
