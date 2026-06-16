@@ -11,29 +11,24 @@
 /* ============================================================
    ABOUT — Page-Specific Styles
    Breakpoints: 1080px · 860px · 600px
-   (Main_Page_Reference_Analysis.md §9 기준 준수)
    ============================================================ */
 
-/* ─── About 전용: 상담예약하기 버튼 바탕색 violet-700 ─── */
 .btn--primary {
   background: var(--violet-700);
   border-color: var(--violet-700);
 }
-
-/* ─── Eyebrow: light variant (dark bg sections) ─── */
 .eyebrow--light {
   color: rgba(255, 255, 255, 0.42);
 }
 
 /* ─────────────────────────────────────────────────────
-   ABOUT HERO — Full-width overlay
+   ABOUT HERO
    ───────────────────────────────────────────────────── */
 .about-hero {
   position: relative;
-  min-height: 90vh;
-  min-height: 90dvh;
+  min-height: 88vh;
+  min-height: 88dvh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow: hidden;
@@ -53,304 +48,223 @@
 .about-hero__overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.80);
+  background: rgba(0, 0, 0, 0.76);
   z-index: 1;
 }
 .about-hero__inner {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 860px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: calc(var(--header-h) + clamp(24px, 3vw, 48px)) var(--gutter) clamp(32px, 4vw, 56px);
+  max-width: 880px;
+  padding: calc(var(--header-h) + clamp(32px, 4vw, 64px)) var(--gutter) clamp(40px, 5vw, 72px);
   margin-top: clamp(40px, 8vh, 100px);
-}
-.about-hero__eyebrow {
-  font-size: var(--text-13);
-  font-weight: 700;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.44);
-  margin-bottom: var(--space-24);
 }
 .about-hero__title {
   font-family: var(--font-sans);
-  font-size: clamp(40px, 5.5vw, 92px);
+  font-size: clamp(38px, 5.2vw, 88px);
   font-weight: 550;
-  line-height: 1.2;
+  line-height: 1.18;
   letter-spacing: var(--tracking-tighter);
-  /* color: var(--white); */
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.88);
   margin-bottom: var(--space-28);
 }
-.about-hero__desc {
-  font-size: var(--text-17);
-  color: rgba(255, 255, 255, 0.62);
-  line-height: 1.85;
-  max-width: 42ch;
-  margin-bottom: clamp(44px, 6vw, 80px);
-}
-.about-hero__scroll {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+.about-hero__sub {
+  font-size: var(--text-16);
+  color: rgba(255, 255, 255, 0.48);
+  letter-spacing: var(--tracking-wide);
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.3);
-  text-decoration: none;
-}
-.about-hero__scroll svg {
-  width: 14px;
-  height: 14px;
-  animation: ab-bounce 1.9s ease-in-out infinite;
-}
-@keyframes ab-bounce {
-  0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(5px); }
+  font-weight: 600;
 }
 
 /* ─────────────────────────────────────────────────────
-   MANIFESTO — Who We Are (pure editorial typography)
+   INTRO — WHO WE ARE
    ───────────────────────────────────────────────────── */
-.manifesto {
-  padding: clamp(88px, 12vw, 160px) 0;
+.intro {
+  padding: clamp(88px, 12vw, 156px) 0;
   background: var(--bg-white);
+}
+.intro__header {
   text-align: center;
+  margin-bottom: clamp(52px, 7vw, 80px);
 }
-.manifesto__inner {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 var(--gutter);
-}
-.manifesto__rule {
-  width: 40px;
-  height: 1px;
-  background: var(--text-caption);
-  border: none;
-  margin: var(--space-32) auto;
-}
-.manifesto__quote {
-  font-family: var(--font-sans);
-  font-size: clamp(20px, 2.6vw, 36px);
-  font-weight: 500;
-  color: var(--text-heading);
-  line-height: 1.65;
-  letter-spacing: var(--tracking-tight);
-  margin-bottom: var(--space-32);
-}
-.manifesto__quote em {
-  font-style: normal;
-  color: var(--text-caption);
-}
-.manifesto__body {
-  font-size: var(--text-17);
-  color: var(--text-body);
-  line-height: 1.95;
-  max-width: 56ch;
-  margin: 0 auto;
-}
-
-/* ─────────────────────────────────────────────────────
-   ORIGIN — Why We Exist (immersive full-bleed image)
-   ───────────────────────────────────────────────────── */
-.origin {
-  position: relative;
-  min-height: clamp(520px, 62vw, 840px);
-  display: flex;
-  align-items: flex-end;
-  overflow: hidden;
-}
-.origin__bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  transition: transform 10s ease;
-}
-.origin:hover .origin__bg {
-  transform: scale(1.025);
-}
-.origin__overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.74) 0%,
-    rgba(0, 0, 0, 0.46) 42%,
-    rgba(0, 0, 0, 0.1)  70%,
-    rgba(0, 0, 0, 0)    100%
-  );
-}
-.origin__content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  max-width: var(--maxw);
-  margin: 0 auto;
+.intro__cols {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(40px, 6vw, 88px);
-  align-items: end;
-  padding: clamp(56px, 8vw, 112px) var(--gutter);
+  max-width: 1080px;
+  margin: 0 auto;
 }
-.origin__eyebrow {
-  font-size: var(--text-13);
-  font-weight: 700;
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.42);
-  margin-bottom: var(--space-20);
-}
-.origin__title {
-  font-family: var(--font-sans);
-  font-size: clamp(30px, 3.8vw, 60px);
-  font-weight: 700;
-  color: var(--white);
-  line-height: 1.1;
-  letter-spacing: var(--tracking-tight);
-}
-.origin__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: var(--space-20);
-}
-.origin__para {
+.intro__text {
   font-size: var(--text-17);
-  color: rgba(255, 255, 255, 0.78);
-  line-height: 1.85;
+  color: var(--text-body);
+  line-height: 1.95;
 }
 
 /* ─────────────────────────────────────────────────────
-   VALUES — What We Believe (numbered horizontal list)
+   STEPS — HOW IT WORKS
    ───────────────────────────────────────────────────── */
-.values {
+.steps {
   padding: clamp(88px, 12vw, 156px) 0;
   background: var(--surface);
 }
-.values__head {
-  margin-bottom: clamp(48px, 7vw, 88px);
+.steps__head {
+  text-align: center;
+  margin-bottom: clamp(56px, 8vw, 96px);
 }
-.values__list {
-  border-top: 1px solid var(--border);
-}
-.value-row {
+.steps__list {
   display: grid;
-  grid-template-columns: clamp(56px, 8vw, 100px) 1fr 1.5fr;
-  gap: clamp(24px, 4vw, 56px);
-  padding: clamp(36px, 5vw, 60px) 0;
-  border-bottom: 1px solid var(--border);
-  align-items: start;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(12px, 2vw, 20px);
 }
-.value-row__num {
+.step {
+  background: var(--bg-white);
+  padding: clamp(36px, 4.5vw, 56px) clamp(28px, 3.5vw, 44px);
+}
+.step__num {
   font-family: var(--font-sans);
-  font-size: clamp(24px, 2.8vw, 40px);
+  font-size: clamp(42px, 4.5vw, 66px);
   font-weight: 700;
   color: var(--text-caption);
   line-height: 1;
-  padding-top: 5px;
+  margin-bottom: var(--space-28);
 }
-.value-row__name {
-  font-family: var(--font-sans);
-  font-size: clamp(18px, 1.9vw, 26px);
+.step__title {
+  font-size: clamp(17px, 1.8vw, 22px);
   font-weight: 700;
   color: var(--text-heading);
-  line-height: 1.3;
-  letter-spacing: var(--tracking-tight);
+  margin-bottom: var(--space-16);
+  line-height: 1.4;
 }
-.value-row__name small {
-  display: block;
-  font-size: var(--text-13);
-  font-weight: 600;
-  color: var(--text-subtle);
-  letter-spacing: var(--tracking-wide);
-  text-transform: uppercase;
-  margin-bottom: var(--space-8);
-}
-.value-row__desc {
-  font-size: var(--text-16);
+.step__desc {
+  font-size: var(--text-15);
   color: var(--text-body);
-  line-height: 1.9;
-  padding-top: 5px;
+  line-height: 1.88;
 }
 
 /* ─────────────────────────────────────────────────────
-   PHILOSOPHY — How We Serve (dark editorial pillars)
+   GUARANTEE — OUR PROMISE (dark)
    ───────────────────────────────────────────────────── */
-.philosophy {
+.guarantee {
   background: var(--bg-black);
   padding: clamp(88px, 12vw, 160px) 0;
 }
-.philosophy__intro {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(40px, 6vw, 96px);
-  align-items: start;
-  margin-bottom: clamp(64px, 9vw, 112px);
+.guarantee__header {
+  margin-bottom: clamp(64px, 9vw, 108px);
 }
-.philosophy__heading {
+.guarantee__title {
   font-family: var(--font-sans);
-  font-size: clamp(26px, 3.2vw, 50px);
+  font-size: clamp(28px, 3.4vw, 54px);
   font-weight: 700;
   color: var(--white);
   line-height: 1.2;
   letter-spacing: var(--tracking-tight);
   margin-top: var(--space-20);
 }
-.philosophy__text {
-  font-size: var(--text-17);
-  color: rgba(255, 255, 255, 0.62);
-  line-height: 1.9;
-  padding-top: 5px;
-}
-.philosophy__pillars {
+.guarantee__cols {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
-.pillar {
-  padding: clamp(32px, 4.5vw, 52px) clamp(20px, 3vw, 40px) clamp(32px, 4.5vw, 52px) 0;
+.guarantee-col {
+  padding: clamp(36px, 5vw, 60px) clamp(24px, 3vw, 44px) clamp(36px, 5vw, 60px) 0;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
-.pillar:last-child {
+.guarantee-col:last-child {
   border-right: none;
   padding-right: 0;
-  padding-left: clamp(20px, 3vw, 40px);
+  padding-left: clamp(24px, 3vw, 44px);
 }
-.pillar:nth-child(2) {
-  padding-left: clamp(20px, 3vw, 40px);
+.guarantee-col:nth-child(2) {
+  padding-left: clamp(24px, 3vw, 44px);
 }
-.pillar__num {
-  font-size: var(--text-13);
-  font-weight: 700;
-  letter-spacing: var(--tracking-wide);
-  color: rgba(255, 255, 255, 0.28);
+.guarantee-col__icon {
+  width: 36px;
+  height: 36px;
   margin-bottom: var(--space-20);
+  color: var(--gold-600);
+  display: block;
 }
-.pillar__title {
-  font-size: clamp(16px, 1.7vw, 22px);
+.guarantee-col__title {
+  font-size: clamp(16px, 1.7vw, 21px);
   font-weight: 700;
   color: var(--white);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--space-16);
   line-height: 1.4;
 }
-.pillar__desc {
+.guarantee-col__desc {
   font-size: var(--text-15);
-  color: rgba(255, 255, 255, 0.5);
-  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.50);
+  line-height: 1.85;
 }
 
 /* ─────────────────────────────────────────────────────
-   KOREA — Why Korea (image left + stat rows right)
+   TESTIMONIALS — Customer Reviews
+   ───────────────────────────────────────────────────── */
+.testimonials {
+  padding: clamp(88px, 12vw, 156px) 0;
+  background: var(--bg-white);
+}
+.testimonials__head {
+  text-align: center;
+  margin-bottom: clamp(56px, 8vw, 96px);
+}
+.testimonials__sub {
+  font-size: var(--text-17);
+  color: var(--text-body);
+  line-height: 1.72;
+  margin-top: var(--space-16);
+}
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(14px, 1.8vw, 22px);
+}
+.review {
+  background: var(--surface);
+  padding: clamp(28px, 3.5vw, 40px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+.review__stars {
+  display: flex;
+  gap: 2px;
+}
+.review__star {
+  color: var(--amber-400);
+  font-size: 13px;
+  line-height: 1;
+}
+.review__text {
+  font-size: var(--text-15);
+  color: var(--text-body);
+  line-height: 1.88;
+  flex: 1;
+}
+.review__divider {
+  width: 28px;
+  height: 1px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+.review__name {
+  font-size: var(--text-14);
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1.4;
+}
+.review__info {
+  font-size: var(--text-13);
+  color: var(--text-subtle);
+  margin-top: 3px;
+}
+
+/* ─────────────────────────────────────────────────────
+   KOREA — WHY KOREA
    ───────────────────────────────────────────────────── */
 .korea {
   padding: clamp(88px, 12vw, 156px) 0;
-  background: var(--bg-white);
+  background: var(--surface);
 }
 .korea__layout {
   display: grid;
@@ -424,12 +338,6 @@
    RESPONSIVE — Tablet (≤ 1080px)
    ───────────────────────────────────────────────────── */
 @media (max-width: 1080px) {
-  .origin__content {
-    grid-template-columns: 1.1fr 1fr;
-  }
-  .value-row {
-    grid-template-columns: clamp(44px, 6vw, 68px) 1fr 1.3fr;
-  }
   .korea__layout {
     gap: clamp(36px, 6vw, 72px);
   }
@@ -439,75 +347,41 @@
    RESPONSIVE — Mobile (≤ 860px)
    ───────────────────────────────────────────────────── */
 @media (max-width: 860px) {
-  /* Hero */
   .about-hero__title {
     font-size: clamp(32px, 8.5vw, 48px);
   }
-  .about-hero__desc {
-    font-size: var(--text-15);
-    max-width: 90%;
-    margin-bottom: var(--space-36);
+
+  .intro__cols {
+    grid-template-columns: 1fr;
+    gap: var(--space-32);
   }
 
-  /* Manifesto */
-  .manifesto {
-    padding: 72px 0;
+  .steps__list {
+    grid-template-columns: 1fr;
+    gap: clamp(8px, 1.5vw, 12px);
   }
 
-  /* Origin: mobile — hide right body, gradient from bottom */
-  .origin {
-    min-height: 440px;
-  }
-  .origin__overlay {
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.84) 0%,
-      rgba(0, 0, 0, 0.5)  50%,
-      rgba(0, 0, 0, 0.14) 100%
-    );
-  }
-  .origin__content {
-    grid-template-columns: 1fr;
-    gap: 0;
-    padding-bottom: clamp(44px, 9vw, 72px);
-  }
-  .origin__body {
-    display: none;
-  }
-
-  /* Values: stack each row */
-  .value-row {
-    grid-template-columns: 1fr;
-    gap: var(--space-10);
-    padding: var(--space-32) 0;
-  }
-  .value-row__num {
-    font-size: 22px;
-  }
-
-  /* Philosophy: stack */
-  .philosophy__intro {
-    grid-template-columns: 1fr;
-    gap: var(--space-20);
-    margin-bottom: clamp(40px, 7vw, 56px);
-  }
-  .philosophy__pillars {
+  .guarantee__cols {
     grid-template-columns: 1fr;
   }
-  .pillar,
-  .pillar:nth-child(2),
-  .pillar:last-child {
-    padding: var(--space-32) 0;
+  .guarantee-col,
+  .guarantee-col:nth-child(2),
+  .guarantee-col:last-child {
+    padding: var(--space-36) 0;
     padding-left: 0;
     padding-right: 0;
     border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
   }
-  .pillar:last-child {
+  .guarantee-col:last-child {
     border-bottom: none;
   }
 
-  /* Korea: stack — image above stats */
+  .testimonials__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(10px, 1.5vw, 16px);
+  }
+
   .korea__layout {
     grid-template-columns: 1fr;
     gap: var(--space-40);
@@ -524,11 +398,8 @@
    RESPONSIVE — Small Mobile (≤ 600px)
    ───────────────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .manifesto__quote {
-    font-size: clamp(18px, 5vw, 23px);
-  }
-  .origin__title {
-    font-size: clamp(24px, 7vw, 34px);
+  .testimonials__grid {
+    grid-template-columns: 1fr;
   }
 }
 </style>
@@ -657,133 +528,214 @@
 </div>
 
 <!-- ============================== ABOUT HERO ============================== -->
-<!-- Full-width: image + 0.85 dark overlay + left-aligned text (bottom) -->
 <section class="about-hero" id="top">
   <div class="about-hero__bg" style="background-image:url('https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1920&q=80')"></div>
   <div class="about-hero__overlay"></div>
   <div class="about-hero__inner">
     <h1 class="about-hero__title">
-      한국의 의료와 여행을<br/>하나로 잇다
+      한국 의료관광의<br/>가장 신뢰할 수 있는<br/>파트너
     </h1>
+    <p class="about-hero__sub">정부 공인 · 검증된 파트너 의료기관 · 1:1 전담 코디네이터</p>
   </div>
 </section>
 
-<!-- ============================== MANIFESTO — WHO WE ARE ============================== -->
-<section class="manifesto" id="who">
-  <div class="manifesto__inner">
-    <p class="eyebrow eyebrow--center" data-reveal>WHO WE ARE</p>
-    <hr class="manifesto__rule" data-reveal="2">
-    <p class="manifesto__quote" data-reveal="3">
-      K-Medi Tour는 단순한 의료 예약 서비스가 아닙니다.<br/>
-      의료와 뷰티, 서울 여행의 경험을<br/>
-      <em>하나의 특별한 여정으로 잇는</em><br/>
-      Premium Concierge in Korea입니다.
-    </p>
-    <p class="manifesto__body" data-reveal="4">
-      해외에서 한국 의료를 경험하려는 분들이 겪는 복잡한 절차와 언어 장벽, 낯선 환경에 대한 불안. K-Medi Tour는 그 모든 과정을 전담 코디네이터가 함께하며 오직 최고의 케어만을 경험할 수 있도록 설계합니다.
-    </p>
+<!-- ============================== WHO WE ARE ============================== -->
+<section class="intro" id="who">
+  <div class="wrap">
+    <div class="intro__header" data-reveal>
+      <p class="eyebrow eyebrow--center">WHO WE ARE</p>
+      <h2 class="display h-lg">K-Medi Tour를 소개합니다</h2>
+    </div>
+    <div class="intro__cols">
+      <p class="intro__text" data-reveal>
+        K-Medi Tour는 외국인 고객이 한국의 최고 수준 의료와 뷰티 케어를 언어 장벽 없이 안심하고 경험할 수 있도록 설계된 프리미엄 컨시어지 서비스입니다. 성형외과·피부과·치과·한방·건강검진까지 각 분야의 검증된 파트너 의료기관과 협력하며, 서울의 최상위 병원들과 독점 협력 관계를 맺고 있습니다.
+      </p>
+      <p class="intro__text" data-reveal>
+        1:1 전담 코디네이터 배정, 공항 픽업부터 귀국까지 전 과정 동행, 한국어·영어·중국어·일본어·베트남어 다국어 통역 지원으로 주요 미디어에 소개된 신뢰받는 서비스를 제공합니다. 오직 당신의 여정만을 위한 맞춤 케어가 시작됩니다.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- ============================== ORIGIN — WHY WE EXIST ============================== -->
-<section class="origin" id="story">
-  <div class="origin__bg" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80')"></div>
-  <div class="origin__overlay"></div>
-  <div class="origin__content">
-    <div class="origin__text" data-reveal>
-      <p class="origin__eyebrow">WHY WE EXIST</p>
-      <h2 class="origin__title">
-        더 나은 경험이<br/>가능하다는<br/>믿음에서
+<!-- ============================== HOW IT WORKS ============================== -->
+<section class="steps" id="how">
+  <div class="wrap">
+    <div class="steps__head" data-reveal>
+      <p class="eyebrow eyebrow--center">HOW IT WORKS</p>
+      <h2 class="display h-lg">서비스 이용 방법</h2>
+    </div>
+    <div class="steps__list">
+      <div class="step" data-reveal>
+        <p class="step__num">01</p>
+        <h3 class="step__title">무료 온라인 상담</h3>
+        <p class="step__desc">원하시는 시술, 일정, 예산을 알려주세요. 전담 코디네이터가 최적의 의료·뷰티·여행 플랜을 설계해드립니다. 한국어, 영어, 중국어, 일본어, 베트남어 상담 가능합니다.</p>
+      </div>
+      <div class="step" data-reveal>
+        <p class="step__num">02</p>
+        <h3 class="step__title">방한 준비 지원</h3>
+        <p class="step__desc">의료기관 예약, 항공·숙소 안내, 비자 정보, 여행 일정까지 모든 준비를 함께합니다. 한국 도착 전부터 케어가 시작됩니다. 걱정은 저희가 맡겠습니다.</p>
+      </div>
+      <div class="step" data-reveal>
+        <p class="step__num">03</p>
+        <h3 class="step__title">현지 전 과정 동행</h3>
+        <p class="step__desc">공항 픽업부터 시술, 회복, 관광, 귀국까지 전담 코디네이터가 모든 과정을 곁에서 함께합니다. 응급상황 대응과 사후 관리까지 책임집니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== OUR PROMISE ============================== -->
+<section class="guarantee" id="promise">
+  <div class="wrap">
+    <div class="guarantee__header" data-reveal>
+      <p class="eyebrow eyebrow--light">OUR PROMISE</p>
+      <h2 class="guarantee__title">
+        최고의 케어를<br/>약속합니다
       </h2>
     </div>
-    <div class="origin__body" data-reveal data-reveal="2">
-      <p class="origin__para">
-        K-Medi Tour는 한국의 앞선 의료를 경험하고 싶지만 복잡한 절차와 언어 장벽으로 망설였던 분들의 이야기에서 시작되었습니다.
-      </p>
-      <p class="origin__para">
-        더 나은 경험을 만들 수 있다는 확신. 모든 과정이 처음부터 안심이 되어야 한다는 믿음. 그 마음이 K-Medi Tour를 탄생시켰습니다.
-      </p>
+    <div class="guarantee__cols" data-reveal>
+      <div class="guarantee-col">
+        <svg class="guarantee-col__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4m6 2a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+        <h3 class="guarantee-col__title">검증된 파트너 의료기관</h3>
+        <p class="guarantee-col__desc">한국 최고 수준의 의료진과 클리닉만을 엄선합니다. 분야별 전문가 검증과 지속적인 품질 모니터링을 통해 항상 최상의 치료 환경을 보장합니다.</p>
+      </div>
+      <div class="guarantee-col">
+        <svg class="guarantee-col__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <h3 class="guarantee-col__title">투명한 비용 안내</h3>
+        <p class="guarantee-col__desc">숨겨진 비용 없이 처음부터 끝까지 정직하게 안내합니다. 시술 전 상세한 비용 명세서를 제공하며, 계획된 금액 외의 추가 비용은 발생하지 않습니다.</p>
+      </div>
+      <div class="guarantee-col">
+        <svg class="guarantee-col__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        <h3 class="guarantee-col__title">전 과정 책임 케어</h3>
+        <p class="guarantee-col__desc">상담부터 귀국까지 전담 코디네이터 한 명이 당신의 여정 전체를 책임집니다. 언제든 연락 가능한 나만의 코디네이터로 낯선 곳에서도 불안이 없습니다.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============================== VALUES — WHAT WE BELIEVE ============================== -->
-<section class="values" id="values">
+<!-- ============================== TESTIMONIALS ============================== -->
+<section class="testimonials" id="reviews">
   <div class="wrap">
-    <div class="values__head" data-reveal>
-      <p class="eyebrow">WHAT WE BELIEVE</p>
-      <h2 class="display h-lg">우리가 지키는 원칙</h2>
+    <div class="testimonials__head" data-reveal>
+      <p class="eyebrow eyebrow--center">TESTIMONIALS</p>
+      <h2 class="display h-lg">고객 후기</h2>
+      <p class="testimonials__sub">세계 각국에서 K-Medi Tour를 경험한 고객들의 이야기입니다.</p>
     </div>
-    <div class="values__list">
-      <div class="value-row" data-reveal>
-        <div class="value-row__num">01</div>
-        <div class="value-row__name">
-          <small>Trust</small>
-          신뢰
+    <div class="testimonials__grid">
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
         </div>
-        <p class="value-row__desc">
-          투명한 정보와 명확한 비용으로 신뢰를 쌓습니다. 숨겨진 비용 없이, 처음부터 끝까지 정직하게 안내합니다. 고객이 스스로 결정할 수 있도록 충분한 정보를 제공하는 것이 우리의 첫 번째 원칙입니다.
-        </p>
-      </div>
-      <div class="value-row" data-reveal>
-        <div class="value-row__num">02</div>
-        <div class="value-row__name">
-          <small>Expertise</small>
-          전문성
+        <p class="review__text">"한국에서 코 성형을 오랫동안 꿈꿨지만 혼자 예약하고 의사소통하는 게 너무 걱정됐어요. K-Medi Tour 덕분에 처음부터 끝까지 영어로 완벽하게 소통됐고, 전담 코디네이터가 항상 곁에 있어줬습니다. 결과도 너무 만족스럽고, 서울 여행까지 즐거운 추억이 됐어요!"</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Emily R.</p>
+          <p class="review__info">미국, Texas — 코 성형</p>
         </div>
-        <p class="value-row__desc">
-          분야별 최고의 의료진과 파트너만을 선별합니다. 검증된 전문성이 최고의 결과를 만듭니다. 의료, 뷰티, 여행 각 분야에서 가장 신뢰할 수 있는 전문가와 함께합니다.
-        </p>
       </div>
-      <div class="value-row" data-reveal>
-        <div class="value-row__num">03</div>
-        <div class="value-row__name">
-          <small>Care</small>
-          케어
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
         </div>
-        <p class="value-row__desc">
-          상담부터 귀국까지 모든 순간을 함께합니다. 낯선 곳에서도 집에 있는 것처럼 안심하고 케어받을 수 있도록, 전담 코디네이터가 당신의 여정 전체를 책임집니다.
-        </p>
+        <p class="review__text">"서울의 피부과 수준은 정말 놀라웠어요. 중국어로 설명해 주시는 코디네이터 덕분에 언어 걱정 없이 시술에만 집중할 수 있었습니다. 귀국 후 주변에서 피부가 훨씬 좋아 보인다는 말을 계속 들었어요. 다음에도 꼭 K-Medi Tour와 함께하겠습니다."</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Liu Yan (刘燕)</p>
+          <p class="review__info">중국, 상하이 — 피부 리프팅</p>
+        </div>
       </div>
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
+        </div>
+        <p class="review__text">"베트남에서 받는 것보다 한국에서 코디네이터의 도움으로 치과 치료를 받는 것이 훨씬 편하고 결과도 월등히 좋았습니다. 공항 픽업부터 귀국까지 정말 세심하게 챙겨주셔서 불편함이 전혀 없었어요. 강력히 추천합니다!"</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Nguyen Thi Lan</p>
+          <p class="review__info">베트남, 하노이 — 치아 임플란트</p>
+        </div>
+      </div>
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
+        </div>
+        <p class="review__text">"일본에서도 K-뷰티는 유명하지만, 직접 서울에 와서 받는 피부 시술은 차원이 달랐어요. 일본어로 소통해 주시는 코디네이터 덕분에 전혀 불안하지 않았고, 시술 결과도 기대 이상이었습니다. 여행도 즐거웠고 정말 완벽한 경험이었어요."</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">田中 幸 (Tanaka Yuki)</p>
+          <p class="review__info">일본, 도쿄 — 더마 리쥬브네이션</p>
+        </div>
+      </div>
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
+        </div>
+        <p class="review__text">"호주에서는 이런 수준의 프리미엄 건강검진을 이 가격에 받기가 불가능해요. K-Medi Tour 덕분에 복잡한 절차 없이 최고 수준의 병원에서 빠르고 정확하게 검진받을 수 있었습니다. 의료 수준과 서비스 모두 최고였어요."</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Sarah Thompson</p>
+          <p class="review__info">호주, 시드니 — 프리미엄 건강검진</p>
+        </div>
+      </div>
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
+        </div>
+        <p class="review__text">"두바이에도 좋은 클리닉이 많지만 한국의 기술 수준은 정말 달랐어요. 코디네이터가 통역까지 완벽하게 지원해주셔서 모든 상담이 편안했습니다. 시술 후 10년은 젊어진 것 같아서 너무 행복해요. 가족들도 깜짝 놀랐습니다."</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Aisha Hassan</p>
+          <p class="review__info">UAE, 두바이 — 안티에이징 패키지</p>
+        </div>
+      </div>
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
+        </div>
+        <p class="review__text">"한국 성형외과의 기술은 정말 달랐어요. 처음에 혼자 예약하기 두려웠는데 K-Medi Tour가 영어로 모든 걸 도와줬어요. 수술 후 회복 기간에도 코디네이터가 매일 챙겨주셔서 정말 안심이 됐습니다. 결과에 100% 만족해요!"</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Maria Santos</p>
+          <p class="review__info">필리핀, 마닐라 — 쌍꺼풀 수술</p>
+        </div>
+      </div>
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
+        </div>
+        <p class="review__text">"캐나다에서 한국 의료에 대해 잘 몰랐는데 K-Medi Tour 덕분에 최고의 안과 병원에서 라식 수술을 받을 수 있었어요. 영어와 한국어 모두 완벽하게 지원해주셨고 비용도 캐나다의 절반 수준이었습니다. 정말 대만족입니다."</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Michael Chen</p>
+          <p class="review__info">캐나다, 밴쿠버 — 라식 수술</p>
+        </div>
+      </div>
+
+      <div class="review" data-reveal>
+        <div class="review__stars">
+          <span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span><span class="review__star">★</span>
+        </div>
+        <p class="review__text">"파리에도 좋은 클리닉이 있지만 한국의 K-뷰티 트리트먼트는 정말 특별해요! 피부 관리부터 시술까지 일주일 동안 정말 왕처럼 대접받았습니다. 프랑스 친구들에게도 모두 추천했어요. Merci beaucoup, K-Medi Tour!"</p>
+        <div class="review__divider"></div>
+        <div>
+          <p class="review__name">Sophie Bernard</p>
+          <p class="review__info">프랑스, 파리 — 복합 뷰티 투어</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ============================== PHILOSOPHY — HOW WE SERVE ============================== -->
-<section class="philosophy" id="serve">
-  <div class="wrap">
-    <div class="philosophy__intro" data-reveal>
-      <div>
-        <p class="eyebrow eyebrow--light">HOW WE SERVE</p>
-        <h2 class="philosophy__heading">
-          컨시어지는<br/>단순한<br/>예약 대행이<br/>아닙니다
-        </h2>
-      </div>
-      <p class="philosophy__text">
-        K-Medi Tour의 컨시어지는 고객의 상황과 필요를 먼저 이해합니다. 최적의 선택을 함께 설계하고, 모든 여정을 곁에서 함께합니다. 시술 후의 회복까지, 당신만의 여정이 완성될 때까지.
-      </p>
-    </div>
-    <div class="philosophy__pillars" data-reveal>
-      <div class="pillar">
-        <p class="pillar__num">01</p>
-        <h3 class="pillar__title">1:1 맞춤 설계</h3>
-        <p class="pillar__desc">고객의 상황과 목적에 맞게 최적의 의료·뷰티·여행 여정을 개인별로 설계합니다. 정해진 패키지가 아닌, 오직 당신을 위한 여정.</p>
-      </div>
-      <div class="pillar">
-        <p class="pillar__num">02</p>
-        <h3 class="pillar__title">전 과정 동행</h3>
-        <p class="pillar__desc">상담부터 시술, 회복, 귀국까지 전담 코디네이터가 모든 과정에 함께합니다. 이중 언어 통역으로 언어 장벽도 없습니다.</p>
-      </div>
-      <div class="pillar">
-        <p class="pillar__num">03</p>
-        <h3 class="pillar__title">안심 케어 보장</h3>
-        <p class="pillar__desc">낯선 환경에서도 안심하고 케어받을 수 있도록 응급 상황 대응부터 회복 관리까지 세심하게 책임집니다.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================== KOREA — WHY KOREA ============================== -->
+<!-- ============================== WHY KOREA ============================== -->
 <section class="korea" id="korea">
   <div class="wrap">
     <div class="korea__layout">
