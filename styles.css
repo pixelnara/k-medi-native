@@ -1718,6 +1718,9 @@ ul {
 }
 /* Dark theme variant — desktop only (861px+) */
 @media (min-width: 861px) {
+  .gnb-col--mypage {
+    order: 5;
+  }
   .gnb-overlay--dark {
     background: var(--gray-950);
     color: var(--white);
