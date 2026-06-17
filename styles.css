@@ -1791,7 +1791,7 @@ ul {
   border-top: 1px solid var(--border);
 }
 .gnb-cols--sub {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   padding-top: var(--space-32);
   padding-bottom: var(--space-40);
   border-top: 1px solid var(--border);
