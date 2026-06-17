@@ -1790,7 +1790,7 @@ ul {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: var(--space-40);
-  padding: 64px 0 var(--space-80);
+  padding: 192px 0 var(--space-80);
   border-top: 1px solid var(--border);
 }
 .gnb-cols--sub {
