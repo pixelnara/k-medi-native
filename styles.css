@@ -247,6 +247,23 @@ ul {
   transition: opacity 0.2s;
 }
 .util-user-btn:hover { opacity: 1; }
+.util-auth-btns {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.util-auth-sep {
+  width: 1px;
+  height: 11px;
+  background: currentColor;
+  opacity: 0.25;
+}
+.util-auth-label {
+  font-size: var(--text-12, 12px);
+  font-weight: 450;
+  margin-left: 4px;
+  letter-spacing: 0.01em;
+}
 
 /* ── Login Modal ── */
 .login-modal {
@@ -1978,6 +1995,14 @@ body:has(.gnb-overlay.is-open) {
 .gnb-login-btn:hover {
   opacity: 0.7;
 }
+.gnb-login-btn--join {
+  background: var(--text-heading);
+  color: #fff;
+  border-color: var(--text-heading);
+}
+.gnb-login-btn--join:hover {
+  opacity: 0.8;
+}
 @media (min-width: 861px) {
   .gnb-overlay--dark .gnb-notif-btn {
     color: rgba(255, 255, 255, 0.75);
@@ -1994,6 +2019,14 @@ body:has(.gnb-overlay.is-open) {
     color: #fff;
     border-color: rgba(255, 255, 255, 0.65);
     opacity: 1;
+  }
+  .gnb-overlay--dark .gnb-login-btn--join {
+    background: #fff;
+    color: var(--gray-900);
+    border-color: #fff;
+  }
+  .gnb-overlay--dark .gnb-login-btn--join:hover {
+    opacity: 0.85;
   }
 }
 @media (max-width: 860px) {
@@ -2014,6 +2047,7 @@ body:has(.gnb-overlay.is-open) {
 .gnb-banner {
   display: none;
 }
+.gnb-col--mobile-only { display: none; }
 .gnb-cols {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -2804,6 +2838,8 @@ body:has(.gnb-overlay.is-open) {
   .gnb-col.is-open > h4 .gnb-chevron {
     transform: rotate(180deg);
   }
+  .gnb-col--mobile-only { display: block; }
+  .gnb-col--about-desktop { display: none; }
   .gnb-cols {
     display: flex;
     flex-direction: column;
