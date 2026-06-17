@@ -1990,7 +1990,7 @@ ul {
 }
 @media (max-width: 860px) {
   .gnb-overlay__actions {
-    margin-right: 50px;
+    margin-right: 0;
     gap: 8px;
   }
   .gnb-notif-btn {
@@ -2008,7 +2008,7 @@ ul {
 }
 .gnb-cols {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-40);
   padding: 96px 0 var(--space-80);
   border-top: 1px solid var(--border);
@@ -2017,8 +2017,8 @@ ul {
   grid-template-columns: repeat(4, 1fr);
   padding-top: var(--space-80);
   padding-bottom: var(--space-40);
-  margin-top: calc(var(--space-80) * -1);
-  border-top: none;
+  margin-top: 0;
+  border-top: 1px solid var(--border);
 }
 .gnb-col > h4 {
   font-family: var(--font-sans);
@@ -2810,12 +2810,7 @@ ul {
     border-top: none;
   }
   /* 모바일: 상단 복사본 표시, sub-row 마이페이지 숨김 */
-  .gnb-col--mypage-mobile {
-    display: block;
-  }
-  .gnb-col--mypage:not(.gnb-col--mypage-mobile) {
-    display: none;
-  }
+
   /* depth2: 패널 — 기본 숨김 */
   .gnb-col ul {
     display: none;
