@@ -140,6 +140,13 @@
         </ul>
       </div>
       <div class="gnb-col">
+        <h4 data-en="Space">스페이스<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
+        <ul>
+          <li><a href="#">피부분석 시스템 🌸</a></li>
+          <li><a href="#">휴그로센터</a></li>
+        </ul>
+      </div>
+      <div class="gnb-col">
         <h4 data-en="News">소식<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
         <ul>
           <li><a href="#" data-en="Event">이벤트</a></li>
@@ -154,6 +161,9 @@
           <li><a href="#" data-en="Hugro Center">휴그로센터</a></li>
         </ul>
       </div>
+    </div>
+    <!-- 2행: 안내, 마이페이지 -->
+    <div class="gnb-cols gnb-cols--sub">
       <div class="gnb-col">
         <h4 data-en="Information">안내<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
         <ul>
@@ -162,9 +172,6 @@
           <li><a href="#" class="gnb-link--bold" data-en="Contact">문의하기</a></li>
         </ul>
       </div>
-    </div>
-    <!-- 2행: 마이페이지 -->
-    <div class="gnb-cols gnb-cols--sub">
       <div class="gnb-col gnb-col--mypage">
         <h4 data-en="My Page">마이페이지<svg class="gnb-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></h4>
         <ul>
@@ -882,6 +889,8 @@
   function openModal(){ modal.classList.add('is-open'); modal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden'; }
   function closeModal(){ modal.classList.remove('is-open'); modal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
   if (trigger) trigger.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
+  const gnbLoginBtn = document.querySelector('.gnb-login-btn');
+  if (gnbLoginBtn) gnbLoginBtn.addEventListener('click', function(e){ e.preventDefault(); openModal(); });
   close.addEventListener('click', closeModal);
   backdrop.addEventListener('click', closeModal);
   document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeModal(); });

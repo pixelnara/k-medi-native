@@ -521,6 +521,24 @@ input[type="password"].login-modal__input {
 .login-admin-link:hover {
   color: #666;
 }
+@media (max-width: 768px) {
+  .login-modal { align-items: flex-start; }
+  .login-modal__backdrop { display: none; }
+  .login-modal__box {
+    width: 100%;
+    min-height: 100dvh;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 0;
+    padding: 56px 24px 48px;
+    overflow-y: auto;
+    box-shadow: none;
+  }
+  .login-modal__close {
+    top: 14px;
+    right: 14px;
+  }
+}
 .lang-select {
   position: relative;
 }
@@ -2175,7 +2193,7 @@ body:has(.gnb-overlay.is-open) {
   border-top: 1px solid var(--border);
 }
 .gnb-cols--sub {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   padding-top: var(--space-80);
   padding-bottom: var(--space-40);
   margin-top: 0;
