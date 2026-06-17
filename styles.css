@@ -2276,7 +2276,7 @@ body:has(.gnb-overlay.is-open) {
 .gnb-col a {
   color: var(--text-heading);
   opacity: 0.8;
-  font-size: var(--text-18);
+  font-size: var(--text-17);
   letter-spacing: var(--tracking-tight);
   transition: 0.3s;
   text-decoration: none;
