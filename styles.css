@@ -3172,7 +3172,9 @@ body:has(.gnb-overlay.is-open) {
     justify-content: space-between;
     margin-top: var(--space-32);
     padding: var(--space-24) var(--space-24);
-    background: var(--bg-black);
+    background:
+      linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
+      url('https://images.unsplash.com/photo-1759722127915-8a24a9c547a8?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
     color: var(--white);
     text-decoration: none;
   }
