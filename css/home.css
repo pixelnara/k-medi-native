@@ -1711,7 +1711,7 @@
     min-height: 130px;
   }
   .gnb-banner--hugro::before {
-    background-image: url("../assets/img-building2.png");
+    background-image: url("../assets/img/img-building2.png");
   }
   /* 시술 서브리스트 — 모바일: 토글 버튼·하위 목록 숨김, 항목은 일반 텍스트처럼 */
   .gnb-sub-list .gnb-has-sub .gnb-sub-toggle {

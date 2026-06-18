@@ -1241,7 +1241,7 @@ body:has(.gnb-overlay.is-open) {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.68) 0%, rgba(0, 0, 0, 0.12) 100%);
 }
 .gnb-banner--hugro::before {
-  background-image: url("../assets/img-building.png");
+  background-image: url("../assets/img/img-building.png");
 }
 .gnb-banner--skin::before {
   background-image: url("https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80");
@@ -1663,7 +1663,7 @@ body:has(.gnb-overlay.is-open) {
     min-height: 130px;
   }
   .gnb-banner--hugro::before {
-    background-image: url("../assets/img-building2.png");
+    background-image: url("../assets/img/img-building2.png");
   }
   /* 시술 서브리스트 — 모바일: 토글 버튼·하위 목록 숨김, 항목은 일반 텍스트처럼 */
   .gnb-sub-list .gnb-has-sub .gnb-sub-toggle {
