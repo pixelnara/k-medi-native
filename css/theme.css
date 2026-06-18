@@ -20,24 +20,6 @@
   --gray-900: #1a1e28; /* 헤딩 텍스트 */
   --gray-950: #101219; /* 최강 다크·버튼 */
 
-  /* ── Blue Scale (#1e49ba 기준) ── */
-  --blue-50: #f1f4fc; /* 최라이트 서피스 */
-  --blue-100: #dbe4f8; /* 라이트 배경 */
-  --blue-200: #b3c5f2; /* 연한 강조 */
-  --blue-300: #7898e8; /* 중간 라이트 */
-  --blue-400: #4168db; /* 라이트 강조 */
-  --blue-500: #1e49ba; /* 브랜드 블루·기준색 */
-  --blue-600: #163a98; /* 중간 강조 */
-  --blue-700: #102c78; /* 딥 블루 */
-  --blue-800: #0a1f58; /* 더 딥 */
-  --blue-900: #061338; /* 최심 다크 */
-
-  /* ── Gold Scale (#b8955e 기준) ── */
-  --gold-500: #b8955e; /* 웜 골드 기준색 */
-  --gold-600: #9b7943; /* 미디엄 앰버 */
-  --gold-700: #765b30; /* 딥 브론즈 */
-  --gold-800: #4f3c1f; /* 다크 브론즈 */
-
   /* ── Brown Scale (#886f65 기준) ── */
   --brown-50: #f7f4f2; /* 최라이트 서피스 */
   --brown-100: #ece6e4; /* 라이트 배경 */
@@ -72,6 +54,16 @@
   --amber-700: #6b511c;
   --amber-800: #483613;
   --amber-900: #241a0a;
+
+  /* ── Gold Scale (#9b7943 기준) ── */
+  --gold-500: #b8955e;
+  --gold-600: #9b7943; /* 브론즈 골드 기준색 */
+  --gold-700: #765b30;
+  --gold-800: #4f3c1f;
+
+  /* ── Social: Kakao ── */
+  --kakao-yellow: #fee500;
+  --kakao-dark: #191919;
 
   /* ─── Primitive: Typography ─── */
 
@@ -151,35 +143,55 @@
   --shadow-btn: 0 4px 16px rgba(0, 0, 0, 0.12);
 
   /* ─── Semantic: Background ─── */
+  /* 명시적 단색 배경 — 페이지·헤더·카드 등 solid bg */
 
-  --bg-white: var(--white);
-  --surface: var(--gray-50);
-  --surface-alt: var(--gray-150); /* 아코디언·보조 서피스 */
-  --bg-black: var(--gray-950);
+  --bg-white: var(--white);              /* 흰색 배경 (body, header, card) */
+  --bg-gray: var(--gray-150);            /* 회색 배경 (accordion item) */
+  --bg-dark: var(--gray-950);            /* 다크 배경 (trust section, banner, top-btn hover) */
+
+  /* ─── Semantic: Surface ─── */
+  /* 섹션·컴포넌트 레벨 서피스 — section 구역·컬럼 배경 */
+
+  --surface-gray-1: var(--gray-50);      /* 연한 서피스 (section bg, tab bg, lang-option) */
+  --surface-gray-2: var(--gray-200);     /* 강조 서피스 (compare col 배경) */
+  --surface-gray-3: var(--brown-50);     /* 웜 서피스 (center map-card) */
 
   /* ─── Semantic: Text ─── */
+  /* gray-1~7: 밝은(gray-300) → 어두운(gray-950) 순. 특수 컬러는 별도 */
 
-  --text-heading: var(--gray-900);
-  --text-body: var(--gray-500);
-  --text-body2: var(--gray-600);
-  --text-body3: var(--gray-900);
-  --text-subtle: var(--gray-400);
-  --text-subtle2: var(--gray-900);
-  --text-caption: var(--gold-600);
+  --text-gray-1: var(--gray-300);        /* 플레이스홀더·비활성 */
+  --text-gray-2: var(--gray-400);        /* 서브텍스트 (날짜, sub-head) */
+  --text-gray-3: var(--gray-500);        /* 본문 기본 */
+  --text-gray-4: var(--gray-600);        /* 본문 보조 (filter chip, footer links) */
+  --text-gray-5: var(--gray-700);        /* 폼 레이블 */
+  --text-gray-6: var(--gray-900);        /* 헤딩·강조 제목 */
+  --text-gray-7: var(--gray-950);        /* 최강 강조 (모바일 헤더, login 제목) */
+  --text-white: var(--white);          /* 다크/컬러 배경 위 흰색 */
+  --text-caption: var(--violet-500);     /* 바이올렛 캡션·레이블·링크 */
+  --rating: var(--amber-400);            /* 별점·평점 */
 
   /* ─── Semantic: Border ─── */
+  /* gray-1~4: 밝은(gray-200) → 어두운(gray-800) 순. warm = brown 계열 */
 
-  --border: var(--gray-200);
-  --border-2: var(--gray-800);
+  --border-gray-1: var(--gray-200);      /* 기본 구분선 (card, feature, gnb) */
+  --border-gray-2: var(--gray-300);      /* 연한 구분선 (mobile gnb) */
+  --border-gray-3: var(--gray-400);      /* 중간 구분선 (footer top/bottom) */
+  --border-gray-4: var(--gray-800);      /* 강조 보더 (cnav-btn, filter chip) */
 
-  /* ─── Semantic: Interactive ─── */
+  /* ─── Semantic: Button ─── */
 
-  --btn: var(--gray-950);
-  --btn-hover3: var(--blue-700);
+  --btn-primary: var(--gray-950);        /* 기본 버튼 배경 (solid, filter active) */
+  --btn-cta: var(--violet-600);          /* CTA 버튼 호버 배경 (.btn--primary:hover) */
 
   /* ─── Semantic: Accent ─── */
-  --accent-mid: var(--blue-500); /* UI 아이콘 · 체크마크 · 숫자 원 */
-  --accent-dark: var(--gold-600); /* 아코디언 배경 · 비교 제목 · 브랜드 버튼 */
+  --accent-mid: var(--violet-500);      /* UI 아이콘 · 체크마크 · 숫자 원 */
+  --accent-dark1: var(--violet-700);     /* 아코디언 배경 · 비교 제목 · 브랜드 버튼 */
+  --accent-dark2: var(--violet-800);    /* 딥 액센트 (compare col, footer bottom, btn2:hover) */
+  --accent-gradient: linear-gradient(135deg, var(--violet-900) 0%, var(--violet-800) 35%, var(--violet-600) 70%, var(--violet-500) 100%); /* CTA dark 배경 */
+
+  /* ─── Semantic: Social Login ─── */
+  --btn-kakao: var(--kakao-yellow);
+  --btn-kakao-text: var(--kakao-dark);
 
   /* ─── Layout ─── */
 
