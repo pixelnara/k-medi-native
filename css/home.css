@@ -712,70 +712,67 @@
   color: var(--accent-dark1);
 }
 
-/* Journey Banner Card */
+/* Journey Banner — 5-icon grid */
 .why-journey {
-  background: var(--brown-100);
-  padding: clamp(44px, 5vw, 64px) clamp(28px, 4vw, 56px);
+  background: var(--surface-gray-3);
+  margin-left: calc(-1 * var(--gutter));
+  margin-right: calc(-1 * var(--gutter));
+  padding: clamp(52px, 6vw, 80px) var(--gutter);
   margin-bottom: clamp(32px, 4vw, 52px);
 }
-.why-hiw__grid {
+.why-journey__icons {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-.why-hiw-card {
-  padding: 0 clamp(24px, 3vw, 48px);
+.why-journey__icon-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  gap: var(--space-20);
+  padding: 0 clamp(12px, 2vw, 28px);
+  border-right: 1px solid var(--border-gray-1);
+  text-align: center;
 }
-.why-hiw-card:first-child {
+.why-journey__icon-item:first-child {
   padding-left: 0;
 }
-.why-hiw-card:last-child {
+.why-journey__icon-item:last-child {
+  border-right: none;
   padding-right: 0;
 }
-.why-hiw-card__icon {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  background: var(--gold-600);
+.why-journey__icon-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
-  margin-bottom: var(--space-40);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(184, 149, 94, 0.12);
+  color: var(--gold-600);
   flex-shrink: 0;
 }
-.why-hiw-card__icon svg {
-  width: 34px;
-  height: 34px;
-  display: block;
+.why-journey__icon-wrap svg {
+  width: 52px;
+  height: 52px;
 }
-.why-hiw-card__step {
+.why-journey__icon-label {
   font-family: var(--font-sans);
-  color: var(--text-gray-6);
-  font-size: clamp(20px, 1.6vw, 26px);
-  font-weight: 700;
-  letter-spacing: var(--tracking-tight);
-  margin-bottom: var(--space-16);
-}
-.why-hiw-step__prefix {
-  display: inline;
-  color: var(--text-gray-2);
-  font-weight: 400;
-}
-.why-hiw-card__step b {
-  color: var(--text-gray-6);
-  font-weight: 600;
-  font-style: italic;
-}
-.why-hiw-card__desc {
-  color: var(--text-gray-4);
   font-size: var(--text-15);
-  font-weight: 400;
-  line-height: 1.85;
+  font-weight: 500;
+  color: var(--text-gray-6);
+  line-height: 1.45;
   word-break: keep-all;
+}
+.why-journey__icon-item::after {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gold-500);
+  flex-shrink: 0;
 }
 
 /* Services Accordion */
@@ -856,12 +853,28 @@
   padding-top: clamp(36px, 4vw, 52px);
 }
 @media (max-width: 760px) {
-  .why-hiw__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-40);
+  .why-journey__icons {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: var(--space-40);
   }
-  .why-hiw-card {
+  .why-journey__icon-item {
+    border-right: none;
     padding: 0;
+  }
+  .why-journey__icon-item:nth-child(odd) {
+    border-right: 1px solid var(--border-gray-1);
+    padding-right: clamp(12px, 4vw, 24px);
+  }
+  .why-journey__icon-item:nth-child(even) {
+    padding-left: clamp(12px, 4vw, 24px);
+  }
+  .why-journey__icon-wrap {
+    width: 90px;
+    height: 90px;
+  }
+  .why-journey__icon-wrap svg {
+    width: 38px;
+    height: 38px;
   }
 }
 
