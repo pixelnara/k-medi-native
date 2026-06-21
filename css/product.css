@@ -660,27 +660,15 @@
     gap: var(--space-32);
   }
   .pd-gallery-outer {
-    gap: var(--space-8);
+    flex-direction: column;
+    gap: 0;
   }
   .pd-rec-panel {
-    position: static;
-    width: auto;
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  .pd-rec-panel__label {
     display: none;
-  }
-  .pd-rec-items {
-    flex-direction: row;
-    gap: var(--space-8);
-  }
-  .pd-rec-item {
-    width: 64px;
-    flex-shrink: 0;
   }
   .pd-gallery {
     position: static;
+    width: 100%;
   }
   .pd-gallery__main {
     border-radius: 2px;
