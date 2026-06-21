@@ -120,12 +120,12 @@
     padding: var(--space-16) 0 var(--space-8);
   }
   .prod-card__name {
-    font-size: var(--text-13);
-    font-weight: 500;
+    font-size: var(--text-12);
+    font-weight: 600;
     letter-spacing: normal;
     -webkit-line-clamp: 1;
     line-clamp: 1;
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-4);
   }
   .prod-card__price {
     font-size: var(--text-13);
