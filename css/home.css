@@ -1362,7 +1362,7 @@
   .hero__inner {
     justify-content: flex-end;
     padding-top: var(--header-h);
-    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px) + 20px);
+    padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px));
     align-items: center;
     text-align: center;
   }
@@ -1371,13 +1371,13 @@
   }
   .hero__title {
     margin-top: 0;
-    font-size: clamp(22px, 5.5vw, 26px);
+    font-size: clamp(27px, 5.5vw, 26px);
     word-spacing: 0.05em;
-    line-height: 1.3;
-    letter-spacing: var(--tracking-normal);
+    line-height: 1.2;
+    letter-spacing: var(--tracking-tight);
     text-align: center;
-    font-weight: 650;
-    padding-bottom: 0.4em;
+    font-weight: 700;
+    padding-bottom: 0.3em;
   }
   .hero__desc {
     display: block;
