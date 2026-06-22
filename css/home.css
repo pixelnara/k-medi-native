@@ -323,9 +323,13 @@
    FEATURE (draggable slider — image + two-column caption)
    ============================================================ */
 .feature {
-  background: var(--surface-gray-1);
-  padding: clamp(56px, 7vw, 110px) 0;
+  background: var(--bg-white);
+  padding: clamp(8px, 1.5vw, 24px) 0 clamp(56px, 7vw, 110px);
   overflow: hidden;
+}
+/* ── 매거진 그룹: stay 그리드 + feature 슬라이더를 한 덩어리로 묶기 ── */
+#why {
+  padding-bottom: clamp(24px, 3vw, 40px);
 }
 .feature__viewport {
   width: 100%;
