@@ -1338,9 +1338,14 @@ image-slot#cert-sgi {
   }
   .gnb-lang-tab {
     flex: 1;
-    padding: var(--space-18) 0;
-    min-height: 48px;
-    font-size: var(--text-12);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-6);
+    padding: 14px 0;
+    height: auto;
+    font-size: var(--text-18);
     font-weight: 600;
     color: var(--text-gray-3);
     background: none;
@@ -1352,6 +1357,16 @@ image-slot#cert-sgi {
       color 0.15s,
       background 0.15s;
     line-height: 1;
+  }
+  .gnb-lang-code {
+    font-size: 20px;
+  }
+  .gnb-lang-flag {
+    width: 28px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
   }
   .gnb-lang-tab:last-child {
     border-right: none;
