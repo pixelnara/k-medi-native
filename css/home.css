@@ -687,8 +687,8 @@
 .news-card__title {
   font-family: var(--font-sans);
   color: var(--text-gray-6);
-  font-size: clamp(14px, 1.5vw, 23px);
-  font-weight: 500;
+  font-size: clamp(14px, 1.3vw, 21px);
+  font-weight: 600;
   line-height: 1.45;
   margin-top: var(--space-10);
   display: -webkit-box;
@@ -1130,14 +1130,13 @@
 }
 /* Step label — enlarged so the sequence reads clearly */
 .hiw-grid .news-card__cat {
-  font-size: var(--text-30);
+  font-size: var(--text-24);
   letter-spacing: var(--tracking-tight);
   display: flex;
-  gap: var(--space-5);
+  gap: var(--space-4);
   align-items: baseline;
 }
 .hiw-grid .news-card__cat small {
-  font-size: 0.5em;
   font-weight: inherit;
   letter-spacing: var(--tracking-open);
   vertical-align: 0.1em;
