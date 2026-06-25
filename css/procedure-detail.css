@@ -323,8 +323,8 @@
 /* +/− 아이콘 */
 .pd-process .acc-icon {
   position: relative;
-  width: 16px;
-  height: 16px;
+  width: 12px;
+  height: 12px;
   flex-shrink: 0;
   color: var(--blue-pure);
 }
@@ -539,7 +539,7 @@
 
 @media (max-width: 600px) {
   .pd-hero__title {
-    font-size: clamp(40px, 12vw, 60px);
+    font-size: clamp(36px, 10vw, 60px);
   }
   .pd-hero__sub {
     font-size: var(--text-15);
@@ -607,7 +607,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 64px;
+    height: 72px;
     background: var(--blue-pure);
     color: var(--text-white);
     font-size: var(--text-17);
@@ -617,7 +617,7 @@
     z-index: 300;
   }
   main {
-    padding-bottom: 60px;
+    /* padding-bottom: 60px; */
   }
 }
 
@@ -632,4 +632,9 @@
 .cta-banner {
   background: var(--blue-600);
   border-top: 4px solid var(--gray-950);
+}
+@media (max-width: 600px) {
+  .cta-banner {
+    border-top: 0;
+  }
 }

@@ -507,7 +507,7 @@
 
 @media (max-width: 860px) {
   .header__right {
-    gap: 6px;
+    gap: 10px;
   }
   .gnb-mobile-top {
     display: block;
@@ -959,8 +959,8 @@
   display: none;
   flex-direction: column;
   gap: 0;
-  margin-top: var(--space-8);
-  margin-bottom: var(--space-8);
+  /* margin-top: var(--space-8); */
+  /* margin-bottom: var(--space-8); */
   padding-left: var(--space-16);
   border-left: 2px solid var(--border-gray-1);
   /* line-height: 1.9; */
