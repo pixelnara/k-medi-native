@@ -1156,7 +1156,8 @@
   font-size: var(--text-15);
   font-weight: 480;
   line-height: 1.8;
-  margin-top: var(--space-10);
+  margin-top: var(--space-12);
+  letter-spacing: var(--tracking-tight);
 }
 /* Mobile: icon+step list */
 .hiw__grid {
