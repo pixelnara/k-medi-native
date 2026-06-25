@@ -262,19 +262,20 @@
 }
 .pss-category__done {
   margin-left: auto;
-  width: 28px;
-  height: 28px;
-  border-radius: 0;
-  background: var(--accent-gray-1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--accent-gray-1);
+  background: transparent;
   display: none;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  color: var(--text-white);
+  color: var(--accent-gray-1);
 }
 .pss-category__done svg {
-  width: 15px;
-  height: 15px;
+  width: 18px;
+  height: 18px;
 }
 .pss-category.is-answered .pss-category__done {
   display: flex;
@@ -1000,78 +1001,8 @@
   }
 }
 
-/* ============================================================
-   RESULT MODAL — 모바일 전용 전체화면 오버레이
-   ============================================================ */
-/* 데스크탑: 모달 헤더 바 숨김 */
 .pss-result__modal-bar {
   display: none;
-}
-
-@media (max-width: 860px) {
-  /* 결과 섹션 → 고정 전체화면 모달 */
-  .pss-result.is-visible {
-    position: fixed;
-    inset: 0;
-    z-index: 900;
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding: 0;
-    background: var(--bg-white);
-    animation: none;
-  }
-  body.pss-modal-open {
-    overflow: hidden;
-  }
-  /* 모달 상단 바 (타이틀 + 닫기) */
-  .pss-result__modal-bar {
-    display: flex;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background: var(--bg-white);
-    border-bottom: 1px solid var(--border-gray-1);
-    padding: 12px 16px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  }
-  .pss-result__modal-title {
-    flex: 1;
-    text-align: center;
-    font-size: var(--text-14);
-    font-weight: 600;
-    color: var(--text-gray-6);
-    letter-spacing: var(--tracking-tight);
-  }
-  .pss-result__close-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: var(--surface-gray-1);
-    border: none;
-    color: var(--text-gray-6);
-    cursor: pointer;
-    flex-shrink: 0;
-    transition: background 0.2s;
-  }
-  .pss-result__close-btn:active {
-    background: var(--border-gray-1);
-  }
-  .pss-result__reset-btn:active {
-    border-color: var(--text-gray-3);
-    color: var(--text-gray-6);
-  }
-  /* 콘텐츠 상하 여백 확보 */
-  .pss-result.is-visible .wrap {
-    padding-top: 28px;
-    padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px) + 24px);
-  }
 }
 
 /* ============================================================

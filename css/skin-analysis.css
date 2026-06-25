@@ -401,6 +401,11 @@
   }
 }
 
+/* chat-btn — 이 페이지에서 숨김 */
+.chat-btn {
+  display: none !important;
+}
+
 /* ─────────────────────────────────────────────────────
    Responsive
    ───────────────────────────────────────────────────── */
@@ -438,11 +443,7 @@
   .page-hero__sub br {
     display: none;
   }
-  .chat-btn {
-    display: none;
-  }
   .sa-carousel__ctrl {
-    /* padding: 0; */
     gap: 5px;
   }
   .sa-carousel__arrow {
@@ -451,5 +452,44 @@
     height: 52px;
     border-radius: 0;
     border: 1px solid var(--border-gray-1);
+  }
+}
+
+/* ─────────────────────────────────────────────────────
+   Desktop — 좌우 화살표 크게 (캐러셀 양쪽 절대 배치)
+   ───────────────────────────────────────────────────── */
+@media (min-width: 860px) {
+  .sa-carousel {
+    position: relative;
+  }
+
+  .sa-carousel__ctrl {
+    justify-content: center;
+  }
+
+  .sa-carousel__arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 52px;
+    height: auto;
+    border: none;
+    background: transparent;
+    color: var(--text-gray-3);
+  }
+
+  .sa-carousel__arrow--prev {
+    left: -52px;
+    border-right: 1px solid var(--border-gray-1);
+  }
+
+  .sa-carousel__arrow--next {
+    right: -52px;
+    border-left: 1px solid var(--border-gray-1);
+  }
+
+  .sa-carousel__arrow svg {
+    width: 28px;
+    height: 28px;
   }
 }

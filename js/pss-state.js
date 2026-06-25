@@ -30,6 +30,18 @@ window.pssState = (function () {
 
     clear: function () {
       try { sessionStorage.removeItem(KEY); } catch (e) {}
+    },
+
+    markNavToProduct: function () {
+      try { sessionStorage.setItem('pss_nav_to_product', '1'); } catch (e) {}
+    },
+
+    isFromProduct: function () {
+      try {
+        var flag = sessionStorage.getItem('pss_nav_to_product');
+        sessionStorage.removeItem('pss_nav_to_product');
+        return flag === '1';
+      } catch (e) { return false; }
     }
   };
 })();
