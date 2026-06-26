@@ -4,12 +4,17 @@
 (function () {
   "use strict";
 
-  /* ---------- Breakpoints — theme.css 토큰(--bp-*)을 단일 소스로 사용 ----------
+  /* ---------- Design Tokens — theme.css를 단일 소스로 사용 ----------
      CSS @media 는 var() 를 못 쓰므로 px 값을 직접 쓰지만, JS 는 :root 의
-     --bp-* 토큰을 읽어 같은 값을 공유한다(불일치 방지). 토큰이 없으면 폴백.   */
+     --bp-* / --scroll-* / --hero-* 토큰을 읽어 값을 공유한다.
+     토큰이 없으면 폴백 값 사용.                                           */
   const ROOT_STYLE = getComputedStyle(document.documentElement);
   function bp(name, fallback) {
     const v = parseInt(ROOT_STYLE.getPropertyValue("--bp-" + name), 10);
+    return Number.isFinite(v) ? v : fallback;
+  }
+  function tok(name, fallback) {
+    const v = parseFloat(ROOT_STYLE.getPropertyValue(name));
     return Number.isFinite(v) ? v : fallback;
   }
   const BP = {
@@ -17,9 +22,19 @@
     small: bp("small", 600),
     treat: bp("treat", 520),
   };
+  const SCROLL = {
+    headerSolid:   tok("--scroll-header-solid", 60),
+    headerCompact: tok("--scroll-header-compact", 80),
+    topBtn:        tok("--scroll-topbtn", 400),
+  };
+  const HERO = {
+    interval: tok("--hero-interval", 6000),
+  };
   // 외부(페이지별 스크립트)에서도 공유할 수 있도록 노출
   window.KMT = window.KMT || {};
   window.KMT.BP = BP;
+  window.KMT.SCROLL = SCROLL;
+  window.KMT.HERO = HERO;
   window.KMT.mqMax = (px) => window.matchMedia("(max-width: " + px + "px)");
 
   /* ---------- applyLang — 언어 코드/국기 동기화 헬퍼 ---------- */
@@ -36,7 +51,7 @@
   /* ---------- Header: transparent -> solid on scroll ---------- */
   const header = document.querySelector(".header");
   const onScroll = () => {
-    if (window.scrollY > 60) header.classList.add("is-solid");
+    if (window.scrollY > SCROLL.headerSolid) header.classList.add("is-solid");
     else header.classList.remove("is-solid");
   };
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -50,7 +65,7 @@
       "scroll",
       function () {
         const y = window.scrollY;
-        if (y > 80) {
+        if (y > SCROLL.headerCompact) {
           header.classList.toggle("is-compact", y > prevY);
         } else {
           header.classList.remove("is-compact");
@@ -209,7 +224,7 @@
   }
   function play() {
     stop();
-    timer = setInterval(() => go(cur + 1), 6000);
+    timer = setInterval(() => go(cur + 1), HERO.interval);
   }
   function stop() {
     if (timer) clearInterval(timer);
@@ -565,7 +580,7 @@
     window.addEventListener(
       "scroll",
       () => {
-        topBtn.classList.toggle("is-visible", window.scrollY > 400);
+        topBtn.classList.toggle("is-visible", window.scrollY > SCROLL.topBtn);
       },
       { passive: true },
     );

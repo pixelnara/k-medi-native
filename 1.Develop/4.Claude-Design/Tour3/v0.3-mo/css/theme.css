@@ -255,8 +255,15 @@
   --header-h: 92px;
 
   /* ─── Breakpoints (reference only — CSS @media does not support var()) ─── */
-  /* JS usage: window.matchMedia("(max-width: 860px)").matches              */
+  /* JS usage: window.KMT.BP.mobile / window.KMT.mqMax(px).matches         */
   --bp-mobile: 860; /* 모바일 GNB / 컴포넌트 레이아웃 전환 */
   --bp-small: 600; /* 소형 모바일 서체·여백 추가 압축 */
   --bp-treat: 520; /* treat-grid 2열 전환 */
+
+  /* ─── JS Interaction Tokens (reference only — unitless, read by app.js) ─── */
+  /* JS usage: window.KMT.SCROLL.* / window.KMT.HERO.*                     */
+  --scroll-header-solid: 60;    /* scrollY > N → 헤더 불투명 */
+  --scroll-header-compact: 80;  /* scrollY 하강 시 헤더 컴팩트 */
+  --scroll-topbtn: 400;         /* scrollY > N → top 버튼 표시 */
+  --hero-interval: 6000;        /* 히어로 슬라이더 자동재생 (ms) */
 }
