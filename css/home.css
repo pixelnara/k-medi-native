@@ -45,31 +45,31 @@
   }
 }
 .hero__slide--first {
-  background-image: url("../assets/img/1-page-home/01_main_banner/hero-12.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea.png");
   background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--first {
-    background-image: url("../assets/img/1-page-home/01_main_banner/hero-12.png");
-    background-position: center center;
+    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea.png");
+    background-position: left bottom;
   }
 }
 .hero__slide--2nd {
-  background-image: url("../assets/img/1-page-home/01_main_banner/hero-8.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
 }
 .hero__slide--3rd {
-  background-image: url("../assets/img/1-page-home/01_main_banner/hero-17.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
 }
 .hero__slide--4th {
-  background-image: url("../assets/img/1-page-home/01_main_banner/hero-7.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
 }
 @media (max-width: 860px) {
   .hero__slide--4th {
-    background-image: url("../assets/img/1-page-home/01_main_banner/hero-7.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
   }
 }
 .hero__slide--5th {
-  background-image: url("../assets/img/1-page-home/01_main_banner/hero-20.jpeg");
+  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
 }
 .hero__slide::after {
   content: none;
@@ -101,7 +101,7 @@
   max-width: 20ch;
   color: var(--text-white);
   text-shadow:
-    0 2px 16px rgba(0, 0, 0, 0.5),
+    0 2px 10px rgba(0, 0, 0, 0.2),
     0 1px 3px rgba(0, 0, 0, 0.3);
   opacity: 0;
   transform: translateY(28px);
@@ -110,8 +110,8 @@
 @media (max-width: 860px) {
   .hero__title {
     text-shadow:
-      0 2px 12px rgba(0, 0, 0, 0.6),
-      0 1px 3px rgba(0, 0, 0, 0.4);
+      0 2px 10px rgba(0, 0, 0, 0.7),
+      0 1px 5px rgba(0, 0, 0, 0.2);
   }
 }
 .hero__desc {
@@ -122,7 +122,7 @@
   max-width: 80ch;
   line-height: 1.65;
   letter-spacing: var(--tracking-tighter);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   opacity: 0;
   transform: translateY(20px);
   animation: rise 1s 0.55s forwards;
