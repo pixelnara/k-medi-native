@@ -78,7 +78,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.25) 40%, rgba(0, 0, 0, 0) 75%);
+  background: rgba(0, 0, 0, 0.4);
 }
 .hero__inner {
   position: relative;
@@ -100,18 +100,17 @@
   letter-spacing: var(--tracking-tightest);
   max-width: 20ch;
   color: var(--text-white);
-  text-shadow:
+  /* text-shadow:
     0 2px 10px rgba(0, 0, 0, 0.2),
-    0 1px 3px rgba(0, 0, 0, 0.3);
-  opacity: 0;
+    0 1px 3px rgba(0, 0, 0, 0.3); */
   transform: translateY(28px);
   animation: rise 1s 0.35s forwards;
 }
 @media (max-width: 860px) {
   .hero__title {
-    text-shadow:
+    /* text-shadow:
       0 2px 10px rgba(0, 0, 0, 0.2),
-      0 1px 3px rgba(0, 0, 0, 0.3);
+      0 1px 3px rgba(0, 0, 0, 0.3); */
   }
 }
 .hero__desc {
@@ -1522,9 +1521,6 @@
   max-width: 45ch;
 }
 @media (max-width: 860px) {
-  .hero__overlay {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0) 70%);
-  }
   /* HIW: 860px 이하에서 모바일 레이아웃으로 전환 */
   .hiw-desktop {
     display: none;
