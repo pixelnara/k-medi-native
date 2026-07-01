@@ -60,7 +60,7 @@
 @media (max-width: 860px) {
   .hero__slide--2nd {
     background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2_mo.png");
-    background-position: center bottom;
+    background-position: center center;
   }
 }
 .hero__slide--3rd {
