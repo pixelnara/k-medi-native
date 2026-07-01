@@ -45,37 +45,42 @@
   }
 }
 .hero__slide--first {
-  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
   background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--first {
-    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_mo.jpg");
-    background-position: left bottom;
+    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_mo_desat.jpg");
+    background-position: center center;
   }
 }
 .hero__slide--2nd {
-  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--2nd {
-    background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2_mo.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_mo_desat.jpg");
     background-position: center center;
   }
 }
 .hero__slide--3rd {
-  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-position: center center;
 }
 .hero__slide--4th {
-  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-position: center center;
 }
 @media (max-width: 860px) {
   .hero__slide--4th {
-    background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
+    background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+    background-position: center center;
   }
 }
 .hero__slide--5th {
-  background-image: url("../assets/img/1-page-home/01_main_banner/bottle_sea2.png");
+  background-image: url("../assets/img/1-page-home/01_main_banner/peoplel_sea_desat.png");
+  background-position: center center;
 }
 .hero__slide::after {
   content: none;
@@ -84,11 +89,11 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 860px) {
   .hero__overlay {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.2);
   }
 }
 .hero__inner {
