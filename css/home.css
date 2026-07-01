@@ -67,8 +67,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
-  /* background: rgba(0, 0, 0, 0.3); */
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0) 75%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 75%);
 }
 .hero__inner {
   position: relative;
